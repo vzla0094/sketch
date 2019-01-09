@@ -16,20 +16,21 @@ function createGrid (squares){
     const divQty = squares * squares;
     for(let i = 0; i < divQty; i++){
         let pixel = nodeCreator(gridContainer,'div');
-        pixel.style.border = "1px solid gray";
-        pixel.style.borderRadius = "30%";
+        pixel.style.transition = "background 1s";
+        pixel.style.borderRadius = "50%";
         pixel.addEventListener('mouseover', randColor);
         pixel.addEventListener('touchmove', randColor);
         function randColor(event){
             let randR = Math.random()*255;
             let randG = Math.random()*255;
-            let randB = Math.random()*255;
+            let randB = Math.random()*255;            
             event.target.style.background = `rgb(${randR},${randG},${randB})`;
         }
     }    
     (function styleAsGrid(){
         gridContainer.style.background = "whitesmoke";
-        gridContainer.style.border = "3px solid black"
+        gridContainer.style.border = "1px solid gray"
+        gridContainer.style.borderRadius = "5%";
         gridContainer.style.height = "90vh";
         gridContainer.style.width = "90vh";
         gridContainer.style.margin = "0 auto";
