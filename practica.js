@@ -17,7 +17,7 @@ function createGrid (squares){
     for(let i = 0; i < divQty; i++){
         let pixel = nodeCreator(gridContainer,'div');
         pixel.style.border = "1px solid gray";
-        pixel.style.borderRadius = "50%";
+        pixel.style.borderRadius = "30%";
         pixel.addEventListener('mouseover', randColor);
         pixel.addEventListener('touchmove', randColor);
         function randColor(event){
