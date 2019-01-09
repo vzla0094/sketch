@@ -19,7 +19,6 @@ function createGrid (squares){
         pixel.style.transition = "background 1s";
         pixel.style.borderRadius = "50%";
         pixel.addEventListener('mouseover', randColor);
-        pixel.addEventListener('touchmove', randColor);
         function randColor(event){
             let randR = Math.random()*255;
             let randG = Math.random()*255;
